@@ -379,18 +379,6 @@ form {
 	margin: 0 auto;
 }
 
-/* Tablet Viewport: Animation */
-@-webkit-keyframes text-animation {
-	0% { font-size: 1em; }
-	50% { font-size: 2em; }
-	100% { font-size: 1.35em; }
-}
-
-@keyframes text-animation {
-	0% { font-size: 1em; }
-	50% { font-size: 2em; }
-	100% { font-size: 1.35em; }
-}
 
 figcaption {
 	-webkit-animation-name: text-animation;
@@ -402,8 +390,6 @@ figcaption {
 }
 
 }
-/* Media Query for Desktop Viewport */
-@media screen and (min-width: 1015px), print {
 
 /* Desktop Viewport: Style rule for header */
 header {
@@ -493,26 +479,3 @@ form {
 
 }
 
-/* Media Query for Large Desktop Viewports */
-@media screen and (min-width: 1921px) {
-	
-	#container {
-		width: 1920px; 
-		margin: 0 auto;
-	}
-	
-}
-
-table {
-	width: 80%;
-}
-
-/* Media Query for Print */
-@media print {
-	
-body {
-	background-color: #fff;
-	color: #000;
-}
-
-}
