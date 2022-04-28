@@ -13,6 +13,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.mysql.cj.protocol.x.AsyncMessageSender;
+
 /**
  * Servlet implementation class HealthAndFit
  */
@@ -60,12 +62,34 @@ public class HealthAndFit extends HttpServlet {
 			          
 			int i=ps.executeUpdate();  
 			if(i>0)  
-			out.print("<h1>Thanks for contacting Us,Will get back to you shortly......</h1>"
+		/*	out.print("<h1>Thanks for contacting Us,Will get back to you shortly......</h1>"
 					+ "<a href="
 					+ "/HealthAndFit/Fitness-Website-main/index.html"
 					
-					+ ">Go back</a>"); 
+					+ ">Go back</a>"
+					
+					+ "<a href="
+					+ "/HealthAndFit/Fitness-Website-main/index.html"
+					
+					+ ">Go back</a>"); */
 			      
+				/*out.print("<!Doctype Html>  \r\n"
+						+ "<Html>     \r\n"
+						+ "<Head>      \r\n"
+						
+						+ "</Head>  \r\n"
+						+ "<Body background=\"images/thankyou.jpg\">  \r\n"
+						+ "<h1>Thanks for contacting Us,Will get back to you shortly......</h1>"
+								+ "<a href="
+								+ "/HealthAndFit/Fitness-Website-main/index.html"
+								
+								+ ">Go back</a>"
+								
+								
+						+ "</Body>  \r\n"
+						+ "</Html> ");*/
+				
+				response.sendRedirect("/HealthAndFit/Fitness-Website-main/thankyou.html");
 			          
 			}catch (Exception e2) {System.out.println(e2);}  
 			          
